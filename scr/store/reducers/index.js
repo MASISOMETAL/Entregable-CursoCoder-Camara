@@ -1,0 +1,1 @@
+export {default as DatabaseReducer} from "./database.reducer";
