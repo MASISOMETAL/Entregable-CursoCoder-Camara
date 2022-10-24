@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { InfoApp } from "../screens";
+import { InfoApp, StoragePhoto } from "../screens";
 import { Colors } from "../constants/color";
 
 
@@ -22,6 +22,13 @@ const InfoNavigation = () =>{
                 component={InfoApp}
                 options={{
                     title: "Uso de Image Picker"
+                }}
+            />
+            <Stack.Screen
+                name="StoragePhoto"
+                component={StoragePhoto}
+                options={{
+                    title: "Fotos Guardadas"
                 }}
             />
         </Stack.Navigator>

@@ -1,4 +1,19 @@
-export const database = [
+export const datebase = [
+    {
+        nombre: "hola",
+        id: 1,
+    },
+    {
+        nombre: "hola",
+        id: 2,
+    },
+    {
+        nombre: "hola",
+        id: 3,
+    },
+]
+
+/*export const datebase = [
     {
         nombre: "Fibra Optica 300MB",
         descripcion: "Internet 300MB + Telefonia Fija",
@@ -62,4 +77,4 @@ export const database = [
         color: "#8b88f5",
         id: 9,
     },
-]
+]*/

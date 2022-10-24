@@ -1,10 +1,10 @@
-import { database } from "../../components/database";
+import { datebase } from "../../components/datebase";
 import { ofertaTypes } from "../types";
 
 const {SELECT_OFERTA} = ofertaTypes;
 
 const initialState = {
-    database : database,
+    datebase : datebase,
     selected: null
  }
  
