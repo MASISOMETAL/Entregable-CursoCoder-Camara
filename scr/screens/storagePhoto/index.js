@@ -6,7 +6,6 @@ import { PhotoContainer } from "../../components";
 
 const StoragePhoto = () =>{
 
-    const datab = useSelector((state) => state.databaseStore.datebase)
     const photo = useSelector((state) => state.photoReducer.photos)
 
     const renderItem = ({item}) => (<PhotoContainer item={item} image={item.image} />)
