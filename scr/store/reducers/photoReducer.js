@@ -1,6 +1,6 @@
 import { photoTypes } from "../types";
 
-const {ADD_PHOTO} = photoTypes
+const {ADD_PHOTO, SET_PHOTO} = photoTypes
 
 const initialState = {
     photos: [],
@@ -9,9 +9,12 @@ const initialState = {
 const PhotosReducer = (state = initialState, action) =>{
     switch (action.type) {
         case ADD_PHOTO:
-        return{
-            photos: [...state.photos,{image: action.image, id: action.image}]
-        }
+            return{
+                photos: [...state.photos,{image: action.image, id: action.id}]
+            }
+        case SET_PHOTO:
+            console.log(action.loadphoto)
+            return state
 
         default:
             return state

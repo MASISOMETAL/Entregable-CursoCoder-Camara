@@ -4,7 +4,7 @@ import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import { Colors } from "../../constants/color";
 import { styles } from "./styles";
 import { Dispatch } from "redux";
-import { SavePhoto } from "../../store/actions/photoAction";
+import { SavePhoto, ImageSave } from "../../store/actions/photoAction";
 import { useDispatch } from "react-redux";
 
 const InfoApp = ({navigation}) =>{
@@ -38,7 +38,7 @@ const InfoApp = ({navigation}) =>{
     };
 
     const savePhoto = () =>{
-        dispatch(SavePhoto(imagePatch));
+        dispatch(ImageSave(imagePatch));
         navigation.navigate("StoragePhoto");
         setPickUrl();
     }
