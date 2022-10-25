@@ -1,7 +1,8 @@
-import { photoTypes } from "../types";
+import { photoTypes, PhotoSet } from "../types";
 import { insertPhoto, getPhoto } from "../../db";
 
-const {ADD_PHOTO, SET_PHOTO} = photoTypes
+const {ADD_PHOTO} = photoTypes
+const {SET_PHOTO} = PhotoSet
 
 export const SavePhoto = ({id, imagePatch})  =>({
     type: ADD_PHOTO,
@@ -31,9 +32,8 @@ export const LoadPhoto = () => {
     return async (dispatch) => {
       try {
         const result = await getPhoto();
-        const loadphoto = result?.rows?._array;
-        console.log(result?.rows?._array)
-        dispatch(setPhoto(loadphoto));
+        //console.log(result?.rows?._array)
+        dispatch(setPhoto(result?.rows?._array));
       } catch (err) {
         throw err;
       }
